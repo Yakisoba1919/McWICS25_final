@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading Page</title>
+  <link rel="stylesheet" href="styles/loading.css"> <!-- External CSS -->
+  <link rel="stylesheet" href="styles/main.css"> 
+</head>
+<body>
+  <div class="cat-wrapper" id="cat-wrapper">
+    <div class="cat-container"></div> <!-- Cat walking and moving right animation -->
+  </div>
+  <div class="loading-container">
+    <p class="loading-text" id="loading-text">Loading</p> <!-- Dynamic dots -->
+  </div>
+
+  <script>
+    // Dynamic dots update
+    const loadingText = document.getElementById("loading-text");
+    let dotCount = 0;
+
+    setInterval(() => {
+      dotCount = (dotCount + 1) % 4; // Dynamic dots effect
+      loadingText.textContent = "Loading" + ".".repeat(dotCount);
+    }, 500);
+
+    // Switch to rotation animation
+    setTimeout(() => {
+      const catWrapper = document.getElementById("cat-wrapper");
+      catWrapper.classList.add("rotating"); // Add rotation class
+    }, 6000); // Switch to rotation after 6 seconds
+
+    // Redirect to home.html (simulate loading completion)
+    setTimeout(() => {
+      window.location.href = "index.html"; // Ensure correct path
+    }, 9000); // Redirect after 9 seconds
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

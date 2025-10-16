@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f6f0e1;
+}
+
+.welcome-container {
+  text-align: center;
+  position: relative;
+  display: flex; /* 使用 flex 布局 */
+  flex-direction: column; /* 子元素垂直排列 */
+  justify-content: center; /* 子元素垂直居中 */
+  align-items: center; /* 子元素水平居中 */
+  height: 100vh; /* 设置容器的高度 */
+  padding: 20px; /* 添加适当的内边距 */
+}
+
+.welcome-title {
+  font-family: 'Rounded Mplus 1c', sans-serif;
+  font-size: 150px; /* 标题大小 */
+  font-weight: bold;
+  color: #47321f;
+  text-align: center;
+  letter-spacing: 15px; /* 调整字母间距 */
+  top: 0px;
+  margin: 0 0 -20px 0; /* 去掉 top，添加底部间距让它靠近猫 */
+  position: relative; /* 相对定位，避免干扰其他元素 */
+  z-index: 0; /* 确保标题在图片上方 */
+}
+
+.welcome-image {
+  width: 850px; /* 固定图片宽度 */
+  height: auto; /* 保持比例 */
+  position: relative;
+  margin-top: -50px;
+  margin-bottom: -40px; /* 与按钮之间保持间距 */
+  z-index: 1;
+}
+
+.start-button {
+  font-family: 'Rounded Mplus 1c', sans-serif;
+  width: 200px; /* 固定宽度 */
+  height: 60px; /* 固定高度 */
+  font-size: 20px; /* 字体大小保持固定 */
+  font-weight: bold;
+  color: #fff;
+  background-color: #785a4a;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2; /* 确保按钮在猫上方 */
+  margin-top: -40px; /* 调整与图片的距离 */
+}
+
+.start-button:hover {
+  background-color: #4f2a01;
+}
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  

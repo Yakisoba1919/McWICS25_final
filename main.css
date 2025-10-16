@@ -1,0 +1,464 @@
+ /*------------------- fonts -------------------*/
+ @font-face {
+  font-family: "MPlus_Black";
+  src: url("Assets/Fonts/MPLUSRounded1c-Black.ttf");
+}
+@font-face {
+  font-family: "MPlus_Bold";
+  src: url("Assets/Fonts/MPLUSRounded1c-Bold.ttf");
+}
+@font-face {
+  font-family: "MPlus_ExtraBold";
+  src: url("Assets/Fonts/MPLUSRounded1c-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "MPlus_Light";
+  src: url("Assets/Fonts/MPLUSRounded1c-Light.ttf");
+}
+@font-face {
+  font-family: "MPlus_Medium";
+  src: url("Assets/Fonts/MPLUSRounded1c-Medium.ttf");
+}
+@font-face {
+  font-family: "MPlus_Regular";
+  src: url("Assets/Fonts/MPLUSRounded1c-Regular.ttf");
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* -------- General and bg -------  */
+
+.background-ALL-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d6be9c;
+  z-index: -10000000;
+}
+
+.paw_bg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d6be9c;
+  z-index: -0.5;
+}
+
+.white-cat-background-container{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+  height: 60vw;
+}
+
+#white-cat-background {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+  height: 60vw;
+  z-index: -0.3;
+}
+
+
+/* ------- Cat------- 
+/*
+/*
+
+/* Cat and its overlays */
+.center-doll {
+  position: absolute;
+  margin-top: 9vw;
+  margin-bottom: 7vw;
+  margin-left: 1vw;
+  width: 50vw;
+  height: 50vw;
+}
+
+/* Just the raw kitty */
+.cat_image {
+  position: relative;
+  /* margin-top: 9vw;
+  margin-bottom: 7vw;
+  margin-left: 1vw; */
+  width: 50vw;
+  height: 50vw;
+  border-radius: 2vw;
+  /* border: 5px double gray; */
+  background-color: #f6f1e4;
+  z-index: 10000;
+}
+
+/* ------- Getting the cat------- 
+/*
+/* */
+.dropdown {
+  position: relative;
+  padding-top: 18vw;
+  padding-left: 58vw;
+  width: 4vw;
+  height: 3vw;
+  z-index: 1100; /* Add z-index to bring dropdown to front */
+}
+
+.dropdown-btn {
+  background-color: white;
+  border: 0.5vw solid #735b4c;
+  /* padding: 12px 0; */
+  font-size: 1.5vw;
+  cursor: pointer;
+  border-radius: 2vw;
+  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
+  transition: background-color 0.3s;
+  width: 25vw;
+  /* width: 250px;  */
+  text-align: center;
+  font-family: MPlus_Bold;
+}
+
+/* Dropdown content styles */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 1.6vw;
+  box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  /* max-height: 200px; */
+  overflow-y: auto;
+}
+
+.dropdown-content a {
+  color: black;
+  width: 15vw;
+  padding: 1vw 3vw;
+  text-decoration: none;
+  display: block;
+}
+
+/* Mommy button */
+
+.button-container {
+  position: absolute;
+  padding-top: 9vw;
+  padding-bottom: 7vw;
+  padding-left: 55vw;
+  width: 3vw;
+  height: 5vw;
+  justify-content: center;
+  align-items: center; 
+}
+
+.generate-btn {
+  font-family: MPlus_ExtraBold;
+  line-height: 1.2;
+  padding: 2vw 1vw;
+  width: 30vw;
+  font-size: 3vw;
+  cursor: pointer;
+  background-color: #735b4c;
+  color: white;
+  border: none;
+  border-radius: 2vw;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* Arrow */
+
+.arrow {
+  position: fixed;
+  margin-top: -3vw;
+  margin-left: 1vw;
+  /* top: 25.5%;            
+  right: 29.5%;           */
+  z-index: 1000000;       /* Make sure it appears on top */
+}
+
+/* Image styles */
+.arrow-img {
+  width: 3vw; /* Adjust size */
+  height: auto; 
+  border: none; /* Ensure no border */
+}
+
+
+/* 
+/* 
+/* 
+/* ------- Customs -------  */
+
+
+.bg-container-for-all-four-folder-container {
+  position: relative;
+  width: 30vw;
+  height: 28vw;
+  background-color: #735b4c;
+  border-radius: 1.5vw; 
+  margin-left: 55vw;
+  margin-top: 2vw;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5vw; 
+  z-index: 100;
+}
+
+/* Tabs */
+
+.folder-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+.folder {
+  width: 9.5vw;
+  height: 3.4vw; 
+  background-color: white;
+  margin: 0.4vw;
+  border-radius: 0.4vw;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  /* border: 5px solid rgb(165, 120, 42);  */
+}
+
+.folder {
+  width: 9.5vw; 
+  height: 3.4vw; 
+  background-color: white; 
+  margin: 0.4vw;
+  border-radius: 0.4vw;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  
+  /* NEWWWW */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.folder img {
+  width: 3vw;
+  height: 3vw;
+  object-fit: contain;
+}
+
+/* white bg for the nine things */
+
+.rectangle {
+  position: absolute;  /* Position it within the parent container */
+  background-color: white;
+  border-radius: 1.5vw;
+  /* Optional: other styles like border, shadow, etc. */
+}
+
+
+/* Holds the nine things */
+
+#rectangleContainer {
+  width: 29vw;
+  height: 23vw;
+  background-color: white;
+  margin-top: 4.6vw;
+  border-radius: 2 vw;
+  border: 0.2vw #b6906b; 
+  overflow: auto; /* Enable scrolling */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+/* Scrollbar */
+
+#rectangleContainer::-webkit-scrollbar {
+  width: 2vw;
+}
+
+#rectangleContainer::-webkit-scrollbar-track {
+  background-color: #dac4a4; /* Set the background color of the scrollbar track */
+}
+
+/* scrolly thing */
+
+#rectangleContainer::-webkit-scrollbar-thumb {
+  background-color: #453322; /* Set the thumb color */
+  border-radius: 1vw;
+}
+
+#rectangleContainer::-webkit-scrollbar-thumb:hover {
+  background-color: #32281b; /* Set the thumb color when hovered */
+}
+
+/* 
+/* 
+/* Into some folders */
+
+#colorPicker, #fontPicker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#colorOptionsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0px !important; /* Add space below the background text */
+  width: 100%;
+}
+
+/* Style for color picker (display color options) */
+.colorOption {
+  width: 5vw;
+  height: 5vw;
+  margin: 10vw;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* Text starts here */
+
+#backgroundTextContainer {
+  margin-top: 2vw !important;
+  display: block;
+  text-align: center;
+  font-size: 2vw; 
+  font-weight: bold; 
+  margin-bottom: 1vw !important; /* Space between the text and color options */
+  color: #444;
+}
+
+.fontOption {
+  cursor: pointer;
+  padding: 1vw;
+  background-color: lightgray;
+  margin: 0.5vw;
+  border-radius: 0.5vw;
+  transition: background-color 0.3s;
+  font-size: 2vw;
+  text-align: center;
+}
+
+#backgroundText {
+  font-family: MPlus_Regular;
+  font-size: 2vw;
+}
+
+#textBox {
+  position: relative;
+  padding: 0.1vw;
+  margin-top: 0.1vw;
+  font-size: 1.8vw;
+  width: 20vw; 
+  height: 4vw; 
+  resize: none; /* Disable resize from browser default */
+}
+
+#textContainer {
+  position: absolute;
+  cursor: move;
+  font-family: "Bangers"; /* Default font */
+  font-size: 1.8vw;
+  white-space: nowrap;
+  user-select: none; /* Prevent text selection during drag */
+  top: 0;
+  left: 0;
+}
+
+#textBox:focus {
+  outline: none; /* Remove focus outline */
+}
+
+.colorOption {
+  width: 3vw;
+  height: 3vw;
+  margin: 0.5w;
+  display: inline-block;
+  cursor: pointer;
+  border: 0.2vw solid #000;
+}
+
+/* we suspect its the colored bg. controlled by js */
+
+#backgroundRectangle {
+  pointer-events: none; /* Ensures the rectangle does not interfere with user interactions */
+}
+
+
+/*
+/* 
+/* 
+/* ------- Exporter ------- */
+
+#btn-download {
+  position: absolute;
+  right: 11vw;
+  bottom: 2.3vw;
+  background-color: #DAC4A4;
+  color: white;
+  font-family: MPlus_Extrabold;
+  border-radius: 2.5vw;
+  border: none;
+  padding: 1vw;
+  cursor: pointer;
+  font-size: 2vw;
+  transition: background-color 0.3s ease;
+}
+/*
+/*
+/* ------- Animations etc -------  */
+
+.dropdown-btn:hover {
+  background-color: #d6be9c; /* change brown on hover */
+}
+.show {
+  display: block !important; /* Force display of dropdown content when 'show' is added */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  font-family: MPlus_Regular;
+  border-radius: 0.5vw;
+}
+
+.generate-btn:hover {
+  background-color: #453322;
+}
+
+.folder:hover {
+  background-color: #d6be9c;
+}
+
+/* Change to brown when clicked */
+.folder.active {
+  background-color: #b6906b;
+}
+
+.fontOption:hover {
+  background-color: gray;
+}
+
+#btn-download:hover {
+  background-color: #B6906B;
+}

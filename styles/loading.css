@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f6f0e1;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+  }
+  
+  .cat-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .cat-container {
+    width: 160px; /* 猫图片宽度 */
+    height: 170px; /* 猫图片高度 */
+    background-image: url('../images/cat_1.png'); /* 初始图片，路径更新 */
+    background-size: contain; /* 图片按比例缩放 */
+    background-position: center; /* 图片居中 */
+    background-repeat: no-repeat; /* 防止图片重复 */
+    animation: walk 0.5s steps(2) infinite, moveRight 6s ease-in-out; /* 移动+走路 */
+  }
+  
+  /* 包裹旋转动画 */
+  .cat-wrapper.rotating .cat-container {
+    animation: walk 0.5s steps(2) infinite, rotateForever 3s linear infinite; /* 旋转+走路 */
+  }
+  
+  /* 猫走路动画 */
+  @keyframes walk {
+    0% { background-image: url('../images/cat_1.png'); }
+    50% { background-image: url('../images/cat_2.png'); }
+    100% { background-image: url('../images/cat_1.png'); }
+  }
+  
+  /* 猫移动动画 */
+  @keyframes moveRight {
+    0% { transform: translateX(0); }                 /* 初始位置 */
+    25% { transform: translateX(0); }               /* 向右移动 */
+    50% { transform: translateX(30px); }            /* 回到中间 */
+    100% { transform: translateX(0); }              /* 保持中间 */
+  }
+  
+  /* 猫旋转动画 */
+  @keyframes rotateForever {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .loading-container {
+    text-align: center;
+    margin-top: 20px; /* 与猫动画保持一定距离 */
+  }
+  
+  .loading-text {
+    font-size: 24px;
+    font-weight: bold;
+    animation: colorChange 2s linear infinite; /* 动态颜色变化 */
+  }
+  
+  /* 动态颜色变化 */
+  @keyframes colorChange {
+    0% { color: #a0775a; } /* 橙色 */
+    25% { color: #785a4a; } /* 深橙色 */
+    50% { color: #483320; } /* 棕色 */
+    75% { color: #785a4a; } /* 深橙色 */
+    100% { color: #a0775a; } /* 回到橙色 */
+  }
+  

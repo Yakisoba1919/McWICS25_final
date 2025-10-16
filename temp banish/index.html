@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <title>The Cat Page</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+     <!-- All of main font -->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400&display=swap">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@800&display=swap">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@900&display=swap">
+ 
+   <!-- All of choosable font -->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&display=swap">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playwrite+IN&display=swap">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap">
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script> 
+
+</head>
+<body>
+
+  <div class="white-bg">
+
+  <button class="btn save as" id="btn-download">
+    DOLL IMAGE
+  </button>
+
+  <div class="container">
+    <div class="col center-doll background">
+    <div class="image-container">
+      <img id="cat_image" class="cat_image" />
+    </div>
+    </div>
+    <div class="button-container">
+      <button id="newCatButton" class="generate-btn">CLICK TO GET YOUR CAT PIC!</button>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdown-btn">Abyssinian</button>
+    <div class="dropdown-content" id="breed-dropdown">
+    </div>
+  </div>
+
+  <div class="arrow">
+    <img src="image.png" alt="A separate image" class="image-separate" />
+  </div>
+  
+  <div class="square-container">
+    <div class="folder-container">
+      <div class="folder" onclick="showImages(1)"></div>
+      <div class="folder" onclick="showImages(2)"></div>
+      <div class="folder" onclick="showColorPicker()"></div>
+      <div class="folder" onclick="showFontPicker()"></div>
+    </div>
+    <div class="rectangle" id="rectangleContainer"></div>
+  </div>
+
+  
+  <!-- Color Picker (hidden initially) -->
+  <div id="colorPicker" style="display: none;">
+    <input type="color" id="colorInput" />
+    <div id="backgroundText">
+      <p>Pick a color for the background!</p>
+    </div>
+    <div id="colorOptionsContainer">
+    
+    <button onclick="applyColor()">Apply Color</button>
+  </div>
+
+  <!-- Font Picker (hidden initially) -->
+  <div id="fontPicker" style="display: none;">
+    <div class="fontOption" onclick="applyFont('Bangers')">Bangers</div>
+    <div class="fontOption" onclick="applyFont('Playwrite IN')">Playwrite IN</div>
+    <div class="fontOption" onclick="applyFont('Delicious Handrawn')">Delicious Handrawn</div>
+  </div>
+  <script src="main.js"></script> <!-- Make sure the script is loaded here -->
+
+</div>
+
+</body>
+</html>

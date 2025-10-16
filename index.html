@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Setup -->
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Metadata -->
+   <title>The Cat Page</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Styling -->
+   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+     <!-- All of main font -->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400&display=swap">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@800&display=swap">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@900&display=swap">
+ 
+   <!-- All of choosable font -->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&display=swap">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playwrite+IN&display=swap">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap">     
+
+
+     <!-- Screenshot -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script> 
+
+
+</head>
+<body>
+
+<div class = "background-ALL-container">
+
+  <div class = "paw_bg">
+    <img src = "Assets/Branding/catbg.png">
+    </div>
+
+  <div class = "white-cat-background-container">
+    <img src = "Assets/Branding/White_cat_bg.png" id = white-cat-background>
+
+    <!-- The cat -->
+
+    <div class = "center-doll">
+      <div class="image-container">
+        <img id="cat_image" class="cat_image" />
+      </div>
+    </div>
+
+    <!-- Button to generate cat -->
+
+    <div class="button-container">
+      <button id="newCatButton" class="generate-btn">CLICK TO GET YOUR CAT PIC!</button>
+    </div>
+    
+    <!-- Dropdown for breed selection -->
+      <div class="dropdown">
+        <button class="dropdown-btn">Select breed</button>
+
+            <!-- Arrow for dropdown -->
+            <div class="arrow">
+              <img src="Assets/Icons/arrow.png" alt="A separate image" class="arrow-img" />
+            </div>
+
+        <div class="dropdown-content" id="breed-dropdown">
+        </div>
+      </div>
+
+    <!-- Folders -->
+
+      <!-- NEWWWWWWWWWWWWWWWWW  -->
+      <div class="bg-container-for-all-four-folder-container">
+        <div class="folder-container">
+          <div class="folder" onclick="showImages(1, this)">
+            <img src="Assets/Icons/rest/Clothes.png" alt="Folder 1 Icon">
+          </div>
+          <div class="folder" onclick="showImages(2, this)">
+            <img src="Assets/Icons/rest/Overlay.png" alt="Folder 2 Icon">
+          </div>
+          <div class="folder" onclick="showColorPicker(this)">
+            <img src="Assets/Icons/rest/BG.png" alt="Color Picker Icon">
+          </div>
+          <div class="folder" 
+            onclick="showFontPicker(this)">
+            <img src="Assets/Icons/rest/T.png" alt="Font Picker Icon">
+          </div>
+        </div>
+        <div class="rectangle" id="rectangleContainer"></div>
+      </div>
+
+    <!-- Save button -->
+        <button class="btn-save-as" id="btn-download">
+          Save kitty image
+        </button>
+
+    
+    <!-- Color Picker (hidden initially) -->
+    <div id="colorPicker" style="display: none;">
+      <input type="color" id="colorInput" />
+      <div id="backgroundText">
+        Pick a color for the background!
+      </div>
+      <div id="colorOptionsContainer">
+      
+      <button onclick="applyColor()">Apply Color</button>
+      </div>
+    
+    <!-- Font Picker (hidden initially) -->
+    <div id="fontPicker" style="display: none;">
+      <div class="fontOption" onclick="applyFont('Bangers')">Bangers</div>
+      <div class="fontOption" onclick="applyFont('Playwrite IN')">Playwrite IN</div>
+      <div class="fontOption" onclick="applyFont('Delicious Handrawn')">Delicious Handrawn</div>
+    </div>
+
+  <!-- For the white cat bg -->
+  </div>  
+
+<!-- For the bg color + pattern -->
+</div>  
+
+<script src="main.js"></script> <!-- Make sure the script is loaded here -->
+
+</body>
+</html>
